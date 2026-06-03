@@ -3,8 +3,10 @@ import DeleteIcon from '../../../../../assets/icons/delete.svg?react';
 import EditIcon from '../../../../../assets/icons/edit.svg?react';
 import { CircularProgressBar } from './CircularProgressBar/CircularProgressBar';
 import styles from './TaskCard.module.scss';
-import { MouseEventHandler, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import type { MouseEventHandler } from 'react';
 import { Prioroty, Status } from '../../shared/types';
+
 
 interface TaskCardProps {
   task: {
@@ -112,7 +114,7 @@ else{
       </div>
       <div className={styles.actions}>
         <button
-          className={`${styles['mr-20']} ${styles.cp}`}
+          className={`${styles['mr-20']} ${styles.cp} ${styles.iconButton} `}
           onClick={onClick}
           type="button"
         >
@@ -120,7 +122,7 @@ else{
         </button>
 
         <button
-          className={styles.cp}
+          className={`${styles.cp} ${styles.iconButton}`}
           onClick={onDelete}
           type="button"
         >
