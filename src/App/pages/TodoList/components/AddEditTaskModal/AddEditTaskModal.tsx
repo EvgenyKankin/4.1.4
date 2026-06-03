@@ -1,4 +1,3 @@
-//import classNames from 'classnames';
 import { CloseButton } from './CloseButton/CloseButton';
 import { Button } from '../../components/Button/Button';
 import { Input } from './Input/Input';
@@ -18,7 +17,10 @@ export const AddEditTaskModal: React.FC<AddEditTaskModalProps> = ({
   const [stateInputValue, setStateInputValue] = useState(
     isEditing && updateTask ? updateTask.title : ''
   );
-  const [statePriority, setStatePriority] = useState('');
+  
+  const [statePriority, setStatePriority] = useState<Prioroty | ''>(
+  isEditing && updateTask ? updateTask.priority : ''
+  );
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setStateInputValue(
@@ -36,7 +38,7 @@ export const AddEditTaskModal: React.FC<AddEditTaskModalProps> = ({
   };
 
   const handleClickAddTask = (event: React.MouseEvent<HTMLButtonElement>) => {
-    /*Создаем задачу*/
+    
     event.preventDefault();
     if (!stateInputValue || !statePriority) {
       alert('Пожалуйста, заполните все поля.');

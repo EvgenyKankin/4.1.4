@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import { taskList as initialTaskList, type Task } from '../../App/pages/TodoList/shared/serverData/taskList';
-import { Status } from '../../App/pages/TodoList/shared/types';
+import { taskList as initialTaskList, type Task } from '../shared/serverData/taskList';
+import { Status } from '../shared/types';
 
 type TodoState = {
   tasks: Task[];
