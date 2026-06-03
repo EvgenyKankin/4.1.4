@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react';
+import { type MouseEventHandler } from 'react';
 import { Button } from '../Button/Button';
 import { Modal } from '../../shared/Modal/Modal';
 import './style.scss';

@@ -1,6 +1,6 @@
 import { Prioroty, Status } from '../../../shared/types';
-import { MouseEventHandler} from 'react';
-import { Task } from '../../../shared/serverData/taskList';
+import { type MouseEventHandler} from 'react';
+import { type Task } from '../../../shared/serverData/taskList';
 export interface AddEditTaskModalProps {
   onClose: MouseEventHandler<HTMLButtonElement>;
   addTask: (newTask: AddEditTaskProps) => void
